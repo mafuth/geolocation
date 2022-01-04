@@ -11,6 +11,8 @@
 <p class="speed"></p>
 <p class="motion"></p>
 <p class="orientation"></p>
+<br>
+<p class="accalt"></p>
 <script>
 //gps data
 if(navigator.geolocation) {
@@ -56,6 +58,8 @@ function showPosition(position){
     $('.longitude').html('long: '+ position.coords.longitude);
     $('.acc').html('gps accuracy: '+ position.coords.accuracy);
     $('.speed').html('speed: '+ position.coords.speed);
+    $('.accalt').html('new alt: '+ position.coords.altitudeAccuracy/100 * position.coords.altitude);
+
 }
 
     
